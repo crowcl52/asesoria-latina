@@ -38,10 +38,8 @@ const videoSrc = '/videos/hero.mp4';
 		<div class="absolute inset-0 bg-black/45"></div>
 	</div>
 
-	<div
-		class="relative z-10 mx-auto w-full max-w-4xl px-4 pb-20 pt-24 text-center text-balance md:pb-28 md:py-28"
-		data-reveal
-	>
+	<!-- Sin data-reveal: el hero debe verse siempre (evita pantalla vacía si falla IO/JS en producción) -->
+	<div class="relative z-10 mx-auto w-full max-w-4xl px-4 pb-20 pt-24 text-center text-balance md:pb-28 md:py-28">
 		<p class="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
 			{messages.brand.tagline}
 		</p>

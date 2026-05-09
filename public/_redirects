@@ -1,0 +1,2 @@
+# Raíz → español (Netlify sirve también dist/index.html; esto refuerza la URL limpia)
+/ /es/ 302

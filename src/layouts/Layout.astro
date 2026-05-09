@@ -28,6 +28,14 @@ const htmlLang = lang === 'es' ? 'es' : 'en';
 		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{messages.meta.title}</title>
+		<noscript>
+			<style>
+				[data-reveal] {
+					opacity: 1 !important;
+					transform: none !important;
+				}
+			</style>
+		</noscript>
 	</head>
 	<body class="min-h-screen">
 		<slot />
@@ -53,6 +61,11 @@ const htmlLang = lang === 'es' ? 'es' : 'en';
 						});
 						return;
 					}
+					function inViewport(el) {
+						var r = el.getBoundingClientRect();
+						var vh = window.innerHeight || document.documentElement.clientHeight;
+						return r.top < vh + 80 && r.bottom > -80;
+					}
 					var io = new IntersectionObserver(
 						function (entries) {
 							entries.forEach(function (entry) {
@@ -62,10 +75,14 @@ const htmlLang = lang === 'es' ? 'es' : 'en';
 								}
 							});
 						},
-						{ rootMargin: '0px 0px -6% 0px', threshold: 0.09 }
+						{ rootMargin: '0px 0px 12% 0px', threshold: 0 }
 					);
 					nodes.forEach(function (n) {
-						io.observe(n);
+						if (inViewport(n)) {
+							n.classList.add('is-visible');
+						} else {
+							io.observe(n);
+						}
 					});
 				}
 
