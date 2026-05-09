@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+	--font-serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
+
+	/* Paleta principal pedida: fondo negro + títulos dorados */
+	--color-page-bg: #000000;
+	--color-surface: #0a0a0a;
+	--color-surface-muted: #141414;
+	--color-border-subtle: rgb(255 255 255 / 0.1);
+
+	--color-gold: #c9a035;
+	--color-gold-light: #e4c76b;
+	--color-gold-muted: #a6862d;
+
+	/* Azules legacy (CTAs, header al hacer scroll, enlaces) */
+	--color-brand-50: #f0f7ff;
+	--color-brand-100: #e0effe;
+	--color-brand-700: #1e4a7a;
+	--color-brand-800: #163a61;
+	--color-brand-900: #0f2844;
+	--color-accent: #c9a227;
+}
+
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		/* Compensar header fijo al usar anclas #servicios, etc. */
+		scroll-padding-top: 5rem;
+	}
+
+	/* Scroll-snap solo mientras se está en el hero (clase puesta por JS) */
+	@media (prefers-reduced-motion: no-preference) {
+		html.snap-hero-active {
+			scroll-snap-type: y mandatory;
+		}
+	}
+
+	body {
+		@apply overflow-x-hidden bg-page-bg text-stone-300 antialiased font-serif;
+	}
+
+	/* Títulos en dorado (variables Tailwind: gold-*) */
+	h1,
+	h2,
+	h3 {
+		@apply font-serif text-gold;
+	}
+
+	/* Revelado al entrar en viewport */
+	[data-reveal] {
+		transition:
+			opacity 0.65s ease-out,
+			transform 0.65s ease-out;
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		[data-reveal]:not(.is-visible) {
+			opacity: 0;
+			transform: translateY(1.35rem);
+		}
+
+		[data-reveal].is-visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		[data-reveal][data-reveal-delay='1'] {
+			transition-delay: 80ms;
+		}
+		[data-reveal][data-reveal-delay='2'] {
+			transition-delay: 160ms;
+		}
+		[data-reveal][data-reveal-delay='3'] {
+			transition-delay: 240ms;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		[data-reveal] {
+			opacity: 1;
+			transform: none;
+			transition: none;
+		}
+	}
+}

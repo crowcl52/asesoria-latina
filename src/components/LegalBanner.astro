@@ -1,0 +1,18 @@
+---
+import type { Messages } from '../i18n';
+
+interface Props {
+	messages: Messages;
+}
+
+const { messages } = Astro.props;
+const l = messages.legal;
+---
+
+<div
+	class="border-y border-gold-muted/35 bg-surface-muted px-4 py-4 text-center font-sans text-sm text-stone-400"
+	role="note"
+>
+	<p class="font-semibold text-gold">{l.title}</p>
+	<p class="mt-1 mx-auto max-w-3xl leading-relaxed">{l.body}</p>
+</div>

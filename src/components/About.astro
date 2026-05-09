@@ -1,0 +1,37 @@
+---
+import type { Messages } from '../i18n';
+
+interface Props {
+	messages: Messages;
+}
+
+const { messages } = Astro.props;
+const a = messages.about;
+const img = messages.images.about;
+---
+
+<section id="about" class="bg-surface py-16 md:py-20">
+	<div class="mx-auto max-w-6xl px-4 sm:px-5" data-reveal>
+		<p class="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-gold-muted">{a.sectionEyebrow}</p>
+		<div class="mt-8 grid gap-10 lg:grid-cols-2 lg:items-start">
+			<div class="overflow-hidden rounded-2xl border border-white/10 shadow-lg">
+				<img src={img} alt={a.imageAlt} class="h-full w-full object-cover" loading="lazy" decoding="async" />
+			</div>
+			<div>
+				<h2 class="text-3xl font-bold md:text-4xl">{a.introTitle}</h2>
+				<p class="mt-4 leading-relaxed text-stone-400">{a.introBody}</p>
+
+				<div class="mt-10 space-y-8">
+					<div>
+						<h3 class="text-xl font-bold">{a.missionTitle}</h3>
+						<p class="mt-3 leading-relaxed text-stone-400">{a.missionBody}</p>
+					</div>
+					<div>
+						<h3 class="text-xl font-bold">{a.visionTitle}</h3>
+						<p class="mt-3 leading-relaxed text-stone-400">{a.visionBody}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

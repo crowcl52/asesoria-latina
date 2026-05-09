@@ -1,0 +1,84 @@
+---
+import '../styles/global.css';
+import type { Lang } from '../i18n';
+import type { Messages } from '../i18n';
+
+interface Props {
+	lang: Lang;
+	messages: Messages;
+}
+
+const { lang, messages } = Astro.props;
+const htmlLang = lang === 'es' ? 'es' : 'en';
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+		<meta name="description" content={messages.meta.description} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+			rel="stylesheet"
+		/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{messages.meta.title}</title>
+	</head>
+	<body class="min-h-screen">
+		<slot />
+		<script is:inline>
+			(function () {
+				function syncHeroSnap() {
+					var hero = document.getElementById('hero');
+					var root = document.documentElement;
+					if (!hero) {
+						root.classList.remove('snap-hero-active');
+						return;
+					}
+					var pastHero = window.scrollY >= hero.offsetHeight - 1;
+					root.classList.toggle('snap-hero-active', !pastHero);
+				}
+
+				function initReveal() {
+					var nodes = document.querySelectorAll('[data-reveal]');
+					if (!nodes.length) return;
+					if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+						nodes.forEach(function (n) {
+							n.classList.add('is-visible');
+						});
+						return;
+					}
+					var io = new IntersectionObserver(
+						function (entries) {
+							entries.forEach(function (entry) {
+								if (entry.isIntersecting) {
+									entry.target.classList.add('is-visible');
+									io.unobserve(entry.target);
+								}
+							});
+						},
+						{ rootMargin: '0px 0px -6% 0px', threshold: 0.09 }
+					);
+					nodes.forEach(function (n) {
+						io.observe(n);
+					});
+				}
+
+				syncHeroSnap();
+				window.addEventListener('scroll', syncHeroSnap, { passive: true });
+				window.addEventListener('resize', syncHeroSnap);
+
+				if (document.readyState === 'loading') {
+					document.addEventListener('DOMContentLoaded', initReveal);
+				} else {
+					initReveal();
+				}
+			})();
+		</script>
+	</body>
+</html>

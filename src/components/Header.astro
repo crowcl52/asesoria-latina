@@ -1,0 +1,146 @@
+---
+import type { Lang } from '../i18n';
+import type { Messages } from '../i18n';
+
+interface Props {
+	lang: Lang;
+	messages: Messages;
+}
+
+const { lang, messages } = Astro.props;
+const { nav, brand } = messages;
+const otherLang: Lang = lang === 'es' ? 'en' : 'es';
+const base = `/${lang}/`;
+
+const navLink =
+	'text-white/90 transition-colors hover:text-gold-light group-data-[scrolled=true]/header:text-stone-400 group-data-[scrolled=true]/header:hover:text-gold';
+const langInactive =
+	'text-white/90 hover:bg-white/15 group-data-[scrolled=true]/header:text-stone-500 group-data-[scrolled=true]/header:hover:bg-white/5 group-data-[scrolled=true]/header:hover:text-gold';
+const langActive = 'bg-gold text-black hover:bg-gold-light';
+---
+
+<header
+	data-site-header
+	class="group/header fixed inset-x-0 top-0 z-50 border-b border-transparent bg-transparent font-sans text-sm text-white transition-[background-color,border-color,backdrop-filter,color] duration-300 data-[scrolled=true]:border-white/10 data-[scrolled=true]:bg-page-bg/95 data-[scrolled=true]:text-stone-300 data-[scrolled=true]:backdrop-blur-md"
+>
+	<div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3 md:gap-4 md:py-4">
+		<a href={base} class="group flex min-w-0 shrink flex-col leading-tight">
+			<span class="truncate font-serif text-base font-bold tracking-tight text-gold sm:text-lg md:text-xl">{brand.name}</span>
+			<span class="hidden text-xs text-white/70 group-data-[scrolled=true]/header:text-gold-muted sm:block"
+				>{brand.tagline}</span
+			>
+		</a>
+
+		<nav class="hidden items-center gap-6 md:flex" aria-label="Principal">
+			<a class={navLink} href={`${base}#about`}>{nav.about}</a>
+			<a class={navLink} href={`${base}#services`}>{nav.services}</a>
+			<a class={navLink} href={`${base}#team`}>{nav.team}</a>
+			<a class={navLink} href={`${base}#faq`}>{nav.faq}</a>
+			<a class={navLink} href={`${base}#contact`}>{nav.contact}</a>
+			<div
+				class="flex items-center gap-2 border-l border-white/25 pl-4 group-data-[scrolled=true]/header:border-white/15"
+			>
+				<a
+					class:list={['rounded px-2 py-1 font-medium transition-colors', lang === 'es' ? langActive : langInactive]}
+					href="/es/"
+					aria-current={lang === 'es' ? 'true' : undefined}
+				>
+					{nav.langEs}
+				</a>
+				<a
+					class:list={['rounded px-2 py-1 font-medium transition-colors', lang === 'en' ? langActive : langInactive]}
+					href="/en/"
+					aria-current={lang === 'en' ? 'true' : undefined}
+				>
+					{nav.langEn}
+				</a>
+			</div>
+			<a
+				class="rounded-full bg-gold px-4 py-2 font-semibold text-black shadow-sm ring-1 ring-white/15 transition-colors hover:bg-gold-light"
+				href={`${base}#contact`}
+			>
+				{nav.cta}
+			</a>
+		</nav>
+
+		<div class="flex items-center gap-2 md:hidden">
+			<a
+				class="rounded px-2 py-1 text-sm font-medium text-gold-light group-data-[scrolled=true]/header:text-gold"
+				href={otherLang === 'es' ? '/es/' : '/en/'}
+			>
+				{otherLang === 'es' ? nav.langEs : nav.langEn}
+			</a>
+			<button
+				type="button"
+				class="inline-flex items-center justify-center rounded-lg border border-white/35 p-2 text-white transition-colors hover:bg-white/10 group-data-[scrolled=true]/header:border-white/20 group-data-[scrolled=true]/header:text-gold group-data-[scrolled=true]/header:hover:bg-white/5"
+				aria-expanded="false"
+				aria-controls="mobile-nav"
+				data-nav-toggle
+			>
+				<span class="sr-only">{nav.openMenu}</span>
+				<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"
+					></path>
+				</svg>
+			</button>
+		</div>
+	</div>
+
+	<div
+		id="mobile-nav"
+		class="absolute left-0 right-0 top-full z-50 hidden max-h-[min(85vh,28rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-surface font-sans text-stone-300 shadow-xl md:hidden"
+		data-mobile-panel
+	>
+		<div class="flex flex-col gap-1 px-4 py-3 pb-[env(safe-area-inset-bottom)]">
+			<a class="rounded-lg px-3 py-2 hover:bg-surface-muted hover:text-gold" href={`${base}#about`}>{nav.about}</a>
+			<a class="rounded-lg px-3 py-2 hover:bg-surface-muted hover:text-gold" href={`${base}#services`}
+				>{nav.services}</a
+			>
+			<a class="rounded-lg px-3 py-2 hover:bg-surface-muted hover:text-gold" href={`${base}#team`}>{nav.team}</a>
+			<a class="rounded-lg px-3 py-2 hover:bg-surface-muted hover:text-gold" href={`${base}#faq`}>{nav.faq}</a>
+			<a class="rounded-lg px-3 py-2 hover:bg-surface-muted hover:text-gold" href={`${base}#contact`}
+				>{nav.contact}</a
+			>
+			<a
+				class="mt-2 rounded-full bg-gold px-4 py-3 text-center font-semibold text-black hover:bg-gold-light"
+				href={`${base}#contact`}
+			>
+				{nav.cta}
+			</a>
+		</div>
+	</div>
+</header>
+
+<script>
+	const header = document.querySelector('[data-site-header]');
+	const hero = document.getElementById('hero');
+
+	function syncHeaderScrolled() {
+		if (!header || !hero) return;
+		const heroBottom = hero.getBoundingClientRect().bottom;
+		const threshold = 72;
+		if (heroBottom < threshold) {
+			header.setAttribute('data-scrolled', 'true');
+		} else {
+			header.removeAttribute('data-scrolled');
+		}
+	}
+
+	syncHeaderScrolled();
+	window.addEventListener('scroll', syncHeaderScrolled, { passive: true });
+	window.addEventListener('resize', syncHeaderScrolled);
+
+	const toggle = document.querySelector('[data-nav-toggle]');
+	const panel = document.querySelector('[data-mobile-panel]');
+	toggle?.addEventListener('click', () => {
+		const open = panel?.classList.toggle('hidden') === false;
+		toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+	});
+
+	panel?.querySelectorAll('a[href]').forEach((link) => {
+		link.addEventListener('click', () => {
+			panel.classList.add('hidden');
+			toggle?.setAttribute('aria-expanded', 'false');
+		});
+	});
+</script>

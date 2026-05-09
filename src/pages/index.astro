@@ -1,0 +1,21 @@
+---
+// Redirección inmediata en despliegues estáticos (meta refresh de Astro usa demora).
+---
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="refresh" content="0;url=/es/" />
+		<link rel="canonical" href="/es/" />
+		<title>Asesoría Latina Co</title>
+	</head>
+	<body>
+		<script is:inline>
+			window.location.replace('/es/');
+		</script>
+		<p>
+			<a href="/es/">Asesoría Latina Co — /es/</a>
+		</p>
+	</body>
+</html>

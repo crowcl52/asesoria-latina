@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "title": "Asesoría Latina Co | Professional services for the Latino community",
+    "description": "Professional office providing fast, reliable, and accessible solutions for the Latino community in the United States. Notary, immigration, translations, LLC formation, and more."
+  },
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "team": "Team",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "cta": "Book a consultation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close",
+    "langEs": "ES",
+    "langEn": "EN"
+  },
+  "brand": {
+    "name": "Asesoría Latina Co",
+    "tagline": "Professional office for the Latino community"
+  },
+  "hero": {
+    "title": "Clear solutions for your paperwork in the United States",
+    "subtitle": "We are a professional office dedicated to providing fast, reliable, and accessible solutions for the Latino community. We guide you with honesty, transparency, and personalized attention.",
+    "primaryCta": "Contact us",
+    "secondaryCta": "View services",
+    "imageAlt": "Professionals assisting clients in an office"
+  },
+  "pillars": {
+    "sectionEyebrow": "Our approach",
+    "title": "Commitment. Values. Trust.",
+    "commitmentTitle": "Our commitment",
+    "commitmentBody": "To support our community by making your paperwork easier with honesty, transparency, and personalized attention—so you can resolve matters without unnecessary stress.",
+    "valuesTitle": "Our values",
+    "values": [
+      {
+        "title": "Commitment",
+        "body": "Your goal is our goal. Your peace of mind is our priority."
+      },
+      {
+        "title": "Integrity",
+        "body": "Honesty and transparency at every step."
+      },
+      {
+        "title": "Efficiency",
+        "body": "We respect your time and work with precision."
+      },
+      {
+        "title": "Empathy",
+        "body": "We listen to and understand our community."
+      },
+      {
+        "title": "Confidentiality",
+        "body": "Your privacy is always protected."
+      }
+    ]
+  },
+  "about": {
+    "sectionEyebrow": "About us",
+    "introTitle": "Who we are",
+    "introBody": "We are a professional office dedicated to providing fast, reliable, and accessible solutions for the Latino community in the United States.",
+    "missionTitle": "Mission",
+    "missionBody": "At Asesoría Latina, our mission is to offer the community professional, accessible solutions that simplify important paperwork and processes. We guide every step with honesty, transparency, and human warmth, acting as a trusted ally that protects your interests and supports your path toward stability and well-being. We are a safe bridge that removes barriers, offering clear, reliable solutions with warmth and personalized attention. We are committed to guiding and supporting our clients so they can complete their paperwork knowing they are protected and supported at every step.",
+    "visionTitle": "Vision",
+    "visionBody": "To be the most trusted office and strategic ally for Latino families in our region—recognized for our integrity, strong values, and quality of service. We aim to empower our community through education and guidance, expanding our services to support well-being and stability. We want everyone who comes to us to complete their paperwork with full confidence, calm, and certainty that their well-being is our top priority.",
+    "imageAlt": "People reviewing documents with confidence"
+  },
+  "services": {
+    "sectionEyebrow": "Services",
+    "title": "Everything you need in one place",
+    "subtitle": "Professional assistance for paperwork, documents, and guidance. Clear pricing from day one.",
+    "items": [
+      {
+        "title": "Notary public",
+        "description": "Fast, secure notarization for important documents."
+      },
+      {
+        "title": "Wedding ceremonies",
+        "description": "Certified minister for elegant, personalized ceremonies."
+      },
+      {
+        "title": "Immigration guidance",
+        "description": "Help with forms and orientation for immigration processes."
+      },
+      {
+        "title": "Professional translations",
+        "description": "Official Spanish ↔ English translation services."
+      },
+      {
+        "title": "Apostilles",
+        "description": "International validation of documents."
+      },
+      {
+        "title": "Dual citizenship",
+        "description": "Step-by-step guidance for your process."
+      },
+      {
+        "title": "Banjercito permits",
+        "description": "We process your vehicle permit before you travel to avoid long lines and delays."
+      },
+      {
+        "title": "LLC formation",
+        "description": "We set up your business to operate: LLC registration, professional logo, website, and initial advertising guidance."
+      },
+      {
+        "title": "Tax guidance",
+        "description": "Orientation and support for your tax responsibilities."
+      },
+      {
+        "title": "Health insurance in Mexico",
+        "description": "Enrollment and coverage guidance (IMSS and options)."
+      },
+      {
+        "title": "Driver licenses",
+        "description": "Help to apply for or renew your driver license quickly and simply."
+      },
+      {
+        "title": "Professional paperwork",
+        "description": "Complete assistance with administrative processes."
+      }
+    ]
+  },
+  "team": {
+    "sectionEyebrow": "Team",
+    "title": "People who care about your peace of mind",
+    "subtitle": "Professionals committed to the Latino community.",
+    "members": [
+      {
+        "name": "Abigail Granados",
+        "role": "CEO & Founder | Wedding Minister | Asesoría Latina Co LLC",
+        "bio": "At the heart of Asesoría Latina Co is a clear purpose: to serve with integrity, empathy, and excellence. My journey began by witnessing how language barriers, misinformation, and lack of reliable guidance affect our Latino community. I created a space where every person is treated with respect, clarity, and professionalism. Asesoría Latina Co is more than an office—it is vision, commitment, and trust.",
+        "imageAlt": "Portrait of Abigail Granados"
+      },
+      {
+        "name": "Ale Olivas",
+        "role": "Notary | Design advisor | Tax advisor",
+        "bio": "With experience in notary services, design guidance, and tax orientation, Ale provides an integrated approach so every client receives clear, efficient solutions tailored to their needs—marked by precision, trust, and human care.",
+        "imageAlt": "Portrait of Ale Olivas"
+      },
+      {
+        "name": "Leonel Martínez",
+        "role": "Advisor — Mexican Social Security Institute (IMSS)",
+        "bio": "Specialized in IMSS enrollment and guidance in Mexico, Leonel offers reliable solutions to protect clients and their families. He provides personalized orientation so people understand their benefits and obtain appropriate coverage. His mission is to make access to health coverage easier and support what matters most: health and family.",
+        "imageAlt": "Portrait of Leonel Martínez"
+      }
+    ]
+  },
+  "faq": {
+    "sectionEyebrow": "FAQs",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "question": "Do I need to speak English to use your services?",
+        "answer": "No. At Asesoría Latina we serve you fully in Spanish and guide you step by step so you understand each process with clarity and confidence."
+      },
+      {
+        "question": "Are you attorneys? Do you provide legal advice?",
+        "answer": "We are not attorneys. We provide professional assistance with document preparation and general guidance to help you avoid mistakes and move your paperwork forward."
+      },
+      {
+        "question": "What kinds of paperwork can you help me with?",
+        "answer": "We offer a wide range of services, including notary public, immigration assistance, professional translations, apostilles, travel permits (Banjercito), LLC registration, tax guidance, health insurance in Mexico, dual citizenship, and more."
+      },
+      {
+        "question": "How long do processes take?",
+        "answer": "It depends on the service. Some tasks are quick (same day), while others take longer depending on institutions. We explain timelines clearly from the start."
+      },
+      {
+        "question": "Can I book in person or only by phone/WhatsApp?",
+        "answer": "You can choose what works best for you—phone or WhatsApp. We adapt to your comfort and safety."
+      },
+      {
+        "question": "How can I pay for services?",
+        "answer": "We accept cash, bank transfers, credit/debit cards, and digital payments. Each service includes clear pricing from the beginning."
+      },
+      {
+        "question": "What documents do I need to start?",
+        "answer": "It depends on the service. We provide a complete checklist before we begin so the process is faster and more efficient."
+      },
+      {
+        "question": "Can you help with Mexico-related paperwork if I live in the United States?",
+        "answer": "Yes. We help with permits, insurance, apostilles, and other services for clients who need Mexico-related processes without unnecessary travel."
+      },
+      {
+        "question": "What makes Asesoría Latina different?",
+        "answer": "We focus on the Latino community, serve in Spanish, provide personalized attention and professionalism, and accompany you through the full process."
+      },
+      {
+        "question": "Can you help me register my business and get it ready to operate?",
+        "answer": "Yes. We can help you form your LLC, design a logo, build a website, and plan initial advertising so your business starts organized and professional."
+      },
+      {
+        "question": "How do you protect my information?",
+        "answer": "All information you share is handled with strict privacy and security, and is used only to complete your paperwork correctly and safely."
+      }
+    ]
+  },
+  "contact": {
+    "sectionEyebrow": "Contact",
+    "title": "Ready to get started?",
+    "subtitle": "Write or call us to schedule a consultation or request information. We are here to help.",
+    "email": "contacto@asesorialatinaco.com",
+    "phoneDisplay": "(000) 000-0000",
+    "phoneTel": "+10000000000",
+    "locationLabel": "Location",
+    "location": "United States",
+    "whatsappUrl": "",
+    "whatsappLabel": "WhatsApp",
+    "callLabel": "Call",
+    "emailLabel": "Email",
+    "form": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Tell us about your request",
+      "submit": "Send message",
+      "required": "This field is required",
+      "invalidEmail": "Please enter a valid email",
+      "defaultSubject": "Website inquiry — Asesoría Latina"
+    }
+  },
+  "footer": {
+    "rights": "Asesoría Latina Co. All rights reserved.",
+    "privacy": "Privacy policy",
+    "terms": "Terms & conditions",
+    "cookies": "Cookie policy",
+    "privacyHref": "#",
+    "termsHref": "#",
+    "cookiesHref": "#",
+    "socialFacebook": "",
+    "socialInstagram": "",
+    "socialFacebookLabel": "Facebook",
+    "socialInstagramLabel": "Instagram"
+  },
+  "legal": {
+    "title": "Important notice",
+    "body": "We are not attorneys. We provide assistance with document preparation and general guidance."
+  },
+  "images": {
+    "hero": "/images/hero.jpg",
+    "about": "/images/about.jpg",
+    "teamFallback": "/images/team-bg.jpg"
+  }
+}

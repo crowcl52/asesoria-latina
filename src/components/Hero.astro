@@ -1,0 +1,70 @@
+---
+import type { Messages } from '../i18n';
+
+interface Props {
+	messages: Messages;
+	langPath: string;
+}
+
+const { messages, langPath } = Astro.props;
+const { hero, images } = messages;
+const videoSrc = '/videos/hero.mp4';
+---
+
+<section
+	id="hero"
+	class="relative flex min-h-[100dvh] min-h-screen snap-start snap-always items-center overflow-hidden bg-black pt-20 text-white"
+	aria-labelledby="hero-heading"
+>
+	<!-- Vídeo de fondo (autoplay requiere muted + playsinline en móvil) -->
+	<div class="absolute inset-0 motion-reduce:hidden" aria-hidden="true">
+		<video
+			class="h-full w-full object-cover"
+			autoplay
+			muted
+			loop
+			playsinline
+			preload="metadata"
+			poster={images.hero}
+		>
+			<source src={videoSrc} type="video/mp4" />
+		</video>
+		<div class="absolute inset-0 bg-black/45"></div>
+	</div>
+
+	<!-- Imagen estática si el usuario pide menos movimiento -->
+	<div class="absolute inset-0 hidden motion-reduce:block" aria-hidden="true">
+		<img src={images.hero} alt="" class="h-full w-full object-cover" loading="eager" decoding="async" />
+		<div class="absolute inset-0 bg-black/45"></div>
+	</div>
+
+	<div
+		class="relative z-10 mx-auto w-full max-w-4xl px-4 pb-20 pt-24 text-center text-balance md:pb-28 md:py-28"
+		data-reveal
+	>
+		<p class="mb-4 font-sans text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+			{messages.brand.tagline}
+		</p>
+		<h1 id="hero-heading" class="text-2xl font-bold leading-tight text-gold sm:text-3xl md:text-5xl lg:text-6xl">
+			{hero.title}
+		</h1>
+		<p class="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-stone-100 md:text-lg">
+			{hero.subtitle}
+		</p>
+		<div class="mt-10 flex w-full max-w-md flex-col gap-3 font-sans sm:max-w-none sm:flex-row sm:flex-wrap sm:justify-center">
+			<a
+				class="inline-flex min-h-[48px] w-full items-center justify-center rounded-full bg-white px-8 py-3 text-sm font-semibold text-brand-900 shadow-lg hover:bg-brand-50 sm:w-auto sm:min-w-[160px]"
+				href={`${langPath}#contact`}
+			>
+				{hero.primaryCta}
+			</a>
+			<a
+				class="inline-flex min-h-[48px] w-full items-center justify-center rounded-full border-2 border-white/50 bg-white/5 px-8 py-3 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15 sm:w-auto sm:min-w-[160px]"
+				href={`${langPath}#services`}
+			>
+				{hero.secondaryCta}
+			</a>
+		</div>
+		<p class="sr-only">{hero.imageAlt}</p>
+	</div>
+</section>

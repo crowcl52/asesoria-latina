@@ -1,0 +1,246 @@
+{
+  "meta": {
+    "title": "Asesoría Latina Co | Servicios profesionales para la comunidad latina",
+    "description": "Oficina profesional dedicada a brindar soluciones rápidas, confiables y accesibles a la comunidad latina en Estados Unidos. Notaría, migración, traducciones, LLC y más."
+  },
+  "nav": {
+    "about": "Nosotros",
+    "services": "Servicios",
+    "team": "Equipo",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "cta": "Agendar consulta",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar",
+    "langEs": "ES",
+    "langEn": "EN"
+  },
+  "brand": {
+    "name": "Asesoría Latina Co",
+    "tagline": "Oficina profesional para la comunidad latina"
+  },
+  "hero": {
+    "title": "Soluciones claras para tus trámites en Estados Unidos",
+    "subtitle": "Somos una oficina profesional dedicada a brindar soluciones rápidas, confiables y accesibles a la comunidad latina. Te acompañamos con honradez, transparencia y atención personalizada.",
+    "primaryCta": "Contáctanos",
+    "secondaryCta": "Ver servicios",
+    "imageAlt": "Profesionales atendiendo en oficina"
+  },
+  "pillars": {
+    "sectionEyebrow": "Nuestro enfoque",
+    "title": "Compromiso. Valores. Confianza.",
+    "commitmentTitle": "Nuestro compromiso",
+    "commitmentBody": "Apoyar y ayudar a nuestra comunidad facilitando tus trámites con honradez, transparencia y atención personalizada, para que resuelvas tus asuntos sin estrés ni preocupaciones.",
+    "valuesTitle": "Nuestros valores",
+    "values": [
+      {
+        "title": "Compromiso",
+        "body": "Tu meta es nuestra meta. Tu tranquilidad, nuestra prioridad."
+      },
+      {
+        "title": "Integridad",
+        "body": "Honestidad y transparencia en cada paso."
+      },
+      {
+        "title": "Eficiencia",
+        "body": "Respetamos tu tiempo; trabajamos con precisión."
+      },
+      {
+        "title": "Empatía",
+        "body": "Escuchamos y entendemos a nuestra comunidad."
+      },
+      {
+        "title": "Confidencialidad",
+        "body": "Tu privacidad, siempre protegida."
+      }
+    ]
+  },
+  "about": {
+    "sectionEyebrow": "Sobre nosotros",
+    "introTitle": "Quiénes somos",
+    "introBody": "Somos una oficina profesional dedicada a brindar soluciones rápidas, confiables y accesibles a la comunidad latina en Estados Unidos.",
+    "missionTitle": "Misión",
+    "missionBody": "En Asesoría Latina, nuestra misión es brindar a la comunidad soluciones profesionales y accesibles que simplifiquen sus trámites y procesos importantes. Guiamos cada paso con honradez, transparencia y calidez humana, actuando como el aliado de confianza que protege sus intereses y facilita su camino hacia la estabilidad y el bienestar. Somos un puente seguro que elimina barreras, ofreciendo soluciones claras y confiables con calidez humana y atención personalizada. Nos comprometemos a orientar y apoyar a nuestros clientes para que puedan realizar sus trámites con la confianza de sentirse protegidos y respaldados en cada paso.",
+    "visionTitle": "Visión",
+    "visionBody": "Ser la oficina de mayor confianza y el aliado estratégico para las familias latinas en la región, reconocidos por nuestra integridad, nuestros sólidos valores y nuestra calidad de atención. Aspiramos a empoderar a nuestra comunidad a través de la educación y la orientación, expandiendo nuestros servicios para impulsar su bienestar y estabilidad. Buscamos que cada persona que acuda a nosotros pueda realizar sus trámites con total seguridad, tranquilidad y la certeza de que su bienestar es nuestra principal prioridad.",
+    "imageAlt": "Personas revisando documentos con tranquilidad"
+  },
+  "services": {
+    "sectionEyebrow": "Servicios",
+    "title": "Todo lo que necesitas, en un solo lugar",
+    "subtitle": "Asistencia profesional para trámites, documentos y orientación. Cada servicio con presupuesto claro desde el inicio.",
+    "items": [
+      {
+        "title": "Notario público",
+        "description": "Legalización de documentos importantes de manera rápida y segura."
+      },
+      {
+        "title": "Ceremonias matrimoniales",
+        "description": "Ministro certificado para ceremonias elegantes y personalizadas."
+      },
+      {
+        "title": "Asesoría de migración",
+        "description": "Apoyo en formularios y orientación en procesos migratorios."
+      },
+      {
+        "title": "Traducciones profesionales",
+        "description": "Traducción oficial español e inglés."
+      },
+      {
+        "title": "Apostillas",
+        "description": "Validación internacional de documentos."
+      },
+      {
+        "title": "Doble ciudadanía",
+        "description": "Asesoría completa paso a paso."
+      },
+      {
+        "title": "Permisos de Banjercito",
+        "description": "Tramitamos tu permiso vehicular antes de viajar para evitar filas y retrasos."
+      },
+      {
+        "title": "Registro de compañías LLC",
+        "description": "Creamos tu negocio listo para operar: registro de LLC, logo profesional, página web y asesoría inicial de publicidad."
+      },
+      {
+        "title": "Asesoría de impuestos",
+        "description": "Orientación y apoyo en tus responsabilidades fiscales."
+      },
+      {
+        "title": "Seguro médico en México",
+        "description": "Afiliación y asesoría de cobertura (IMSS y opciones)."
+      },
+      {
+        "title": "Licencias de conducir",
+        "description": "Te ayudamos a tramitar o renovar tu licencia de conducir de manera rápida y sencilla."
+      },
+      {
+        "title": "Trámites profesionales",
+        "description": "Asistencia completa en procesos administrativos."
+      }
+    ]
+  },
+  "team": {
+    "sectionEyebrow": "Equipo",
+    "title": "Personas que cuidan tu tranquilidad",
+    "subtitle": "Profesionales comprometidos con la comunidad latina.",
+    "members": [
+      {
+        "name": "Abigail Granados",
+        "role": "CEO y fundadora | Wedding Minister | Asesoría Latina Co LLC",
+        "bio": "En el corazón de Asesoría Latina Co existe un propósito claro: servir con integridad, empatía y excelencia. Mi trayectoria comienza al observar de cerca una realidad que afecta profundamente a nuestra comunidad latina: las barreras del idioma, la desinformación y la falta de acceso a orientación confiable. Decidí crear un espacio donde cada persona sea atendida con respeto, claridad y profesionalismo. Asesoría Latina Co no es solo una oficina: es una visión, compromiso y confianza.",
+        "imageAlt": "Retrato de Abigail Granados"
+      },
+      {
+        "name": "Ale Olivas",
+        "role": "Notaría | Asesora de diseño | Asesora de impuestos",
+        "bio": "Con experiencia en el ámbito notarial, asesoría en diseño y orientación en temas fiscales, Ale brinda un enfoque integral para que cada cliente reciba soluciones claras, eficientes y adaptadas a sus necesidades. Su atención se caracteriza por la precisión, la confianza y el trato humano que cada persona merece.",
+        "imageAlt": "Retrato de Ale Olivas"
+      },
+      {
+        "name": "Leonel Martínez",
+        "role": "Asesor en el Instituto Mexicano del Seguro Social",
+        "bio": "Especializado en la afiliación y asesoría del IMSS en México, brinda soluciones confiables para la protección y el bienestar de nuestros clientes y sus familias. Acompaña cada proceso con orientación personalizada para que comprendan sus beneficios y obtengan una cobertura adecuada. Su misión es facilitar el acceso a protección médica y ser un aliado en el cuidado de la salud y la familia.",
+        "imageAlt": "Retrato de Leonel Martínez"
+      }
+    ]
+  },
+  "faq": {
+    "sectionEyebrow": "FAQs",
+    "title": "Preguntas frecuentes",
+    "items": [
+      {
+        "question": "¿Necesito hablar inglés para recibir sus servicios?",
+        "answer": "No. En Asesoría Latina atendemos completamente en español y te guiamos paso a paso para que entiendas cada proceso con claridad y confianza."
+      },
+      {
+        "question": "¿Son abogados o pueden dar asesoría legal?",
+        "answer": "No somos abogados. Ofrecemos asistencia profesional en la preparación de documentos y orientación general, para evitar errores y facilitar tus trámites."
+      },
+      {
+        "question": "¿Qué tipo de trámites pueden ayudarme a realizar?",
+        "answer": "Ofrecemos una amplia variedad de servicios, incluyendo: notaría pública, trámites de migración (asistencia), traducciones profesionales, apostillas, permisos de viaje (Banjercito), registro de compañías LLC, asesoría de impuestos, seguro médico en México, doble ciudadanía y más."
+      },
+      {
+        "question": "¿Cuánto tiempo tardan los trámites?",
+        "answer": "El tiempo depende del tipo de servicio. Algunos procesos son rápidos (mismo día), mientras que otros pueden tardar más según las instituciones. Siempre te informamos claramente desde el inicio."
+      },
+      {
+        "question": "¿Puedo agendar una cita en persona o solo por teléfono o WhatsApp?",
+        "answer": "Puedes elegir la modalidad que prefieras: por llamada telefónica o por WhatsApp. Nos adaptamos a tu comodidad y seguridad."
+      },
+      {
+        "question": "¿Cómo puedo pagar por los servicios?",
+        "answer": "Aceptamos pagos en efectivo, transferencia bancaria, tarjetas de crédito o débito y pagos digitales. Cada servicio incluye un presupuesto claro desde el inicio."
+      },
+      {
+        "question": "¿Qué documentos necesito para iniciar mis trámites?",
+        "answer": "Depende del servicio. Te proporcionamos una lista completa de documentos antes de iniciar, para que todo el proceso sea más rápido y eficiente."
+      },
+      {
+        "question": "¿Pueden ayudarme con trámites en México aunque viva en Estados Unidos?",
+        "answer": "Sí. Facilitamos permisos, seguros, apostillas y otros servicios para clientes que necesitan realizar trámites en México, sin que tengas que viajar innecesariamente."
+      },
+      {
+        "question": "¿Qué diferencia a Asesoría Latina de otras oficinas?",
+        "answer": "Nos enfocamos en la comunidad latina, ofrecemos servicio en español, atención personalizada, profesionalismo y un acompañamiento completo en cada trámite."
+      },
+      {
+        "question": "¿Pueden ayudarme a registrar mi negocio y prepararlo para empezar a operar?",
+        "answer": "Sí. Te ayudamos a crear tu LLC, diseño de logo, página web y estrategias iniciales de publicidad para que tu negocio comience con buena imagen y organización."
+      },
+      {
+        "question": "¿Cómo aseguran la confidencialidad de mi información?",
+        "answer": "Todos los datos que compartes con nosotros se manejan con estricta privacidad y seguridad. Solo se utilizan para completar tus trámites de manera correcta y segura."
+      }
+    ]
+  },
+  "contact": {
+    "sectionEyebrow": "Contacto",
+    "title": "¿Listo para comenzar?",
+    "subtitle": "Escríbenos o llámanos para agendar una consulta o solicitar información. Estamos para ayudarte.",
+    "email": "contacto@asesorialatinaco.com",
+    "phoneDisplay": "(000) 000-0000",
+    "phoneTel": "+10000000000",
+    "locationLabel": "Ubicación",
+    "location": "Estados Unidos",
+    "whatsappUrl": "",
+    "whatsappLabel": "WhatsApp",
+    "callLabel": "Llamar",
+    "emailLabel": "Correo",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "subject": "Asunto",
+      "message": "Cuéntanos sobre tu trámite o consulta",
+      "submit": "Enviar mensaje",
+      "required": "Este campo es obligatorio",
+      "invalidEmail": "Introduce un correo válido",
+      "defaultSubject": "Consulta desde la web — Asesoría Latina"
+    }
+  },
+  "footer": {
+    "rights": "Asesoría Latina Co. Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "terms": "Términos y condiciones",
+    "cookies": "Política de cookies",
+    "privacyHref": "#",
+    "termsHref": "#",
+    "cookiesHref": "#",
+    "socialFacebook": "",
+    "socialInstagram": "",
+    "socialFacebookLabel": "Facebook",
+    "socialInstagramLabel": "Instagram"
+  },
+  "legal": {
+    "title": "Aviso importante",
+    "body": "No somos abogados. Ofrecemos asistencia en la preparación de documentos y orientación general."
+  },
+  "images": {
+    "hero": "/images/hero.jpg",
+    "about": "/images/about.jpg",
+    "teamFallback": "/images/team-bg.jpg"
+  }
+}

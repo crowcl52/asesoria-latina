@@ -1,0 +1,156 @@
+---
+import type { Messages } from '../i18n';
+
+interface Props {
+	contact: Messages['contact'];
+}
+
+const { contact } = Astro.props;
+const f = contact.form;
+const fieldClass =
+	'mt-1 w-full rounded-lg border border-white/15 bg-page-bg px-3 py-2 font-sans text-stone-200 shadow-sm placeholder:text-stone-500 focus:border-gold-muted focus:outline-none focus:ring-2 focus:ring-gold-muted/25';
+const labelClass = 'block text-sm font-medium text-stone-300 font-sans';
+---
+
+<form
+	id="contact-form"
+	class="space-y-4"
+	data-email={contact.email}
+	data-default-subject={f.defaultSubject}
+	data-label-first={f.firstName}
+	data-label-last={f.lastName}
+	data-label-email={f.email}
+	data-label-phone={f.phone}
+	data-label-subject={f.subject}
+	data-label-message={f.message}
+	data-err-required={f.required}
+	data-err-email={f.invalidEmail}
+>
+	<div class="grid gap-4 sm:grid-cols-2">
+		<div>
+			<label class={labelClass} for="cf-first">{f.firstName}</label>
+			<input class={fieldClass} type="text" id="cf-first" name="firstName" autocomplete="given-name" required />
+			<p class="mt-1 hidden text-xs text-red-600 font-sans" data-error-for="cf-first"></p>
+		</div>
+		<div>
+			<label class={labelClass} for="cf-last">{f.lastName}</label>
+			<input class={fieldClass} type="text" id="cf-last" name="lastName" autocomplete="family-name" required />
+			<p class="mt-1 hidden text-xs text-red-600 font-sans" data-error-for="cf-last"></p>
+		</div>
+	</div>
+	<div class="grid gap-4 sm:grid-cols-2">
+		<div>
+			<label class={labelClass} for="cf-email">{f.email}</label>
+			<input class={fieldClass} type="email" id="cf-email" name="email" autocomplete="email" required />
+			<p class="mt-1 hidden text-xs text-red-600 font-sans" data-error-for="cf-email"></p>
+		</div>
+		<div>
+			<label class={labelClass} for="cf-phone">{f.phone}</label>
+			<input class={fieldClass} type="tel" id="cf-phone" name="phone" autocomplete="tel" required />
+			<p class="mt-1 hidden text-xs text-red-600 font-sans" data-error-for="cf-phone"></p>
+		</div>
+	</div>
+	<div>
+		<label class={labelClass} for="cf-subject">{f.subject}</label>
+		<input class={fieldClass} type="text" id="cf-subject" name="subject" autocomplete="off" />
+		<p class="mt-1 hidden text-xs text-red-600 font-sans" data-error-for="cf-subject"></p>
+	</div>
+	<div>
+		<label class={labelClass} for="cf-message">{f.message}</label>
+		<textarea class={`${fieldClass} min-h-[120px] resize-y`} id="cf-message" name="message" required></textarea>
+		<p class="mt-1 hidden text-xs text-red-600 font-sans" data-error-for="cf-message"></p>
+	</div>
+	<button
+		type="submit"
+		class="w-full rounded-full bg-gold px-6 py-3 font-sans text-sm font-semibold text-black shadow hover:bg-gold-light sm:w-auto"
+	>
+		{f.submit}
+	</button>
+</form>
+
+<script>
+	function showError(inputId: string, message: string) {
+		const el = document.querySelector(`[data-error-for="${inputId}"]`);
+		if (el) {
+			el.textContent = message;
+			el.classList.remove('hidden');
+		}
+	}
+
+	function clearErrors(form: HTMLFormElement) {
+		form.querySelectorAll('[data-error-for]').forEach((n) => {
+			n.classList.add('hidden');
+			(n as HTMLElement).textContent = '';
+		});
+	}
+
+	function validEmail(v: string) {
+		return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+	}
+
+	const form = document.getElementById('contact-form') as HTMLFormElement | null;
+	form?.addEventListener('submit', (e) => {
+		e.preventDefault();
+		clearErrors(form);
+
+		const emailTo = form.dataset.email;
+		const defaultSubject = form.dataset.defaultSubject ?? '';
+		const errRequired = form.dataset.errRequired ?? 'Required';
+		const errEmail = form.dataset.errEmail ?? 'Invalid email';
+
+		const first = (form.querySelector('#cf-first') as HTMLInputElement).value.trim();
+		const last = (form.querySelector('#cf-last') as HTMLInputElement).value.trim();
+		const mail = (form.querySelector('#cf-email') as HTMLInputElement).value.trim();
+		const phone = (form.querySelector('#cf-phone') as HTMLInputElement).value.trim();
+		let subject = (form.querySelector('#cf-subject') as HTMLInputElement).value.trim();
+		const message = (form.querySelector('#cf-message') as HTMLTextAreaElement).value.trim();
+
+		const lFirst = form.dataset.labelFirst ?? 'First';
+		const lLast = form.dataset.labelLast ?? 'Last';
+		const lEmail = form.dataset.labelEmail ?? 'Email';
+		const lPhone = form.dataset.labelPhone ?? 'Phone';
+		const lSubject = form.dataset.labelSubject ?? 'Subject';
+		const lMessage = form.dataset.labelMessage ?? 'Message';
+
+		let ok = true;
+		if (!first) {
+			showError('cf-first', errRequired);
+			ok = false;
+		}
+		if (!last) {
+			showError('cf-last', errRequired);
+			ok = false;
+		}
+		if (!mail) {
+			showError('cf-email', errRequired);
+			ok = false;
+		} else if (!validEmail(mail)) {
+			showError('cf-email', errEmail);
+			ok = false;
+		}
+		if (!phone) {
+			showError('cf-phone', errRequired);
+			ok = false;
+		}
+		if (!message) {
+			showError('cf-message', errRequired);
+			ok = false;
+		}
+		if (!ok || !emailTo) return;
+
+		if (!subject) subject = defaultSubject;
+
+		const body = [
+			`${lFirst}: ${first}`,
+			`${lLast}: ${last}`,
+			`${lEmail}: ${mail}`,
+			`${lPhone}: ${phone}`,
+			'',
+			`${lMessage}:`,
+			message,
+		].join('\n');
+
+		const href = `mailto:${emailTo}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+		window.location.href = href;
+	});
+</script>

@@ -1,0 +1,59 @@
+---
+import ContactForm from './ContactForm.astro';
+import LegalBanner from './LegalBanner.astro';
+import type { Messages } from '../i18n';
+
+interface Props {
+	messages: Messages;
+}
+
+const { messages } = Astro.props;
+const c = messages.contact;
+---
+
+<section id="contact" class="bg-page-bg py-16 md:py-20">
+	<div class="mx-auto max-w-6xl px-4 sm:px-5" data-reveal>
+		<div class="mb-10 w-full">
+			<LegalBanner messages={messages} />
+		</div>
+		<p class="font-sans text-xs font-semibold uppercase tracking-[0.2em] text-gold-muted">{c.sectionEyebrow}</p>
+		<h2 class="mt-2 text-3xl font-bold md:text-4xl">{c.title}</h2>
+		<p class="mt-4 max-w-2xl text-stone-400">{c.subtitle}</p>
+
+		<div class="mt-12 grid gap-10 lg:grid-cols-5">
+			<div class="space-y-6 font-sans lg:col-span-2">
+				<div class="rounded-2xl border border-white/10 bg-surface-muted p-6">
+					<p class="text-xs font-semibold uppercase tracking-wide text-gold-muted">{c.emailLabel}</p>
+					<a class="mt-1 block break-all text-lg font-semibold text-gold-light hover:underline" href={`mailto:${c.email}`}>
+						{c.email}
+					</a>
+				</div>
+				<div class="rounded-2xl border border-white/10 bg-surface-muted p-6">
+					<p class="text-xs font-semibold uppercase tracking-wide text-gold-muted">{c.callLabel}</p>
+					<a class="mt-1 block text-lg font-semibold text-gold-light hover:underline" href={`tel:${c.phoneTel}`}>
+						{c.phoneDisplay}
+					</a>
+				</div>
+				<div class="rounded-2xl border border-white/10 bg-surface-muted p-6">
+					<p class="text-xs font-semibold uppercase tracking-wide text-gold-muted">{c.locationLabel}</p>
+					<p class="mt-1 text-lg font-semibold text-gold">{c.location}</p>
+				</div>
+				{
+					c.whatsappUrl && (
+						<a
+							class="inline-flex w-full items-center justify-center rounded-full bg-emerald-700 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-emerald-600"
+							href={c.whatsappUrl}
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							{c.whatsappLabel}
+						</a>
+					)
+				}
+			</div>
+			<div class="rounded-2xl border border-white/10 bg-surface p-6 shadow-sm lg:col-span-3">
+				<ContactForm contact={c} />
+			</div>
+		</div>
+	</div>
+</section>
