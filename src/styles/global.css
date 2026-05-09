@@ -25,14 +25,14 @@
 @layer base {
 	html {
 		scroll-behavior: smooth;
-		/* Compensar header fijo al usar anclas #servicios, etc. */
-		scroll-padding-top: 5rem;
+		/* Header fijo + algo de aire al usar enlaces #seccion */
+		scroll-padding-top: 6rem;
+		scroll-padding-bottom: 1rem;
 	}
 
-	/* Scroll-snap solo mientras se está en el hero (clase puesta por JS) */
-	@media (prefers-reduced-motion: no-preference) {
-		html.snap-hero-active {
-			scroll-snap-type: y mandatory;
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
 		}
 	}
 

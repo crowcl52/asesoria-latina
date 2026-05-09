@@ -17,7 +17,8 @@
   },
   "brand": {
     "name": "Asesoría Latina Co",
-    "tagline": "Oficina profesional para la comunidad latina"
+    "tagline": "Oficina profesional para la comunidad latina",
+    "logo": "/images/logo.png"
   },
   "hero": {
     "title": "Soluciones claras para tus trámites en Estados Unidos",
@@ -129,18 +130,21 @@
         "name": "Abigail Granados",
         "role": "CEO y fundadora | Wedding Minister | Asesoría Latina Co LLC",
         "bio": "En el corazón de Asesoría Latina Co existe un propósito claro: servir con integridad, empatía y excelencia. Mi trayectoria comienza al observar de cerca una realidad que afecta profundamente a nuestra comunidad latina: las barreras del idioma, la desinformación y la falta de acceso a orientación confiable. Decidí crear un espacio donde cada persona sea atendida con respeto, claridad y profesionalismo. Asesoría Latina Co no es solo una oficina: es una visión, compromiso y confianza.",
+        "image": "/images/abby.png",
         "imageAlt": "Retrato de Abigail Granados"
       },
       {
         "name": "Ale Olivas",
         "role": "Notaría | Asesora de diseño | Asesora de impuestos",
         "bio": "Con experiencia en el ámbito notarial, asesoría en diseño y orientación en temas fiscales, Ale brinda un enfoque integral para que cada cliente reciba soluciones claras, eficientes y adaptadas a sus necesidades. Su atención se caracteriza por la precisión, la confianza y el trato humano que cada persona merece.",
+        "image": "/images/ale_oliva.jpeg",
         "imageAlt": "Retrato de Ale Olivas"
       },
       {
         "name": "Leonel Martínez",
         "role": "Asesor en el Instituto Mexicano del Seguro Social",
         "bio": "Especializado en la afiliación y asesoría del IMSS en México, brinda soluciones confiables para la protección y el bienestar de nuestros clientes y sus familias. Acompaña cada proceso con orientación personalizada para que comprendan sus beneficios y obtengan una cobertura adecuada. Su misión es facilitar el acceso a protección médica y ser un aliado en el cuidado de la salud y la familia.",
+        "image": "/images/leonel.jpeg",
         "imageAlt": "Retrato de Leonel Martínez"
       }
     ]

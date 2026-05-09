@@ -12,10 +12,19 @@ const f = messages.footer;
 ---
 
 <footer
-	class="[scroll-snap-align:none] border-t border-white/10 bg-black py-12 font-sans text-stone-400"
+	class="border-t border-white/10 bg-black py-12 font-sans text-stone-400"
 >
 	<div class="mx-auto flex max-w-6xl flex-col gap-8 px-4 md:flex-row md:items-start md:justify-between">
 		<div>
+			<img
+				src={messages.brand.logo}
+				alt=""
+				width={240}
+				height={72}
+				class="mb-4 h-14 w-auto max-w-[220px] object-contain object-left md:h-16 md:max-w-[260px]"
+				loading="lazy"
+				decoding="async"
+			/>
 			<p class="font-serif text-xl font-bold text-gold">{messages.brand.name}</p>
 			<p class="mt-2 max-w-sm text-sm text-stone-500">{messages.brand.tagline}</p>
 			<p class="mt-6 text-xs text-stone-600">© {new Date().getFullYear()} {f.rights}</p>

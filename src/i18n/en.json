@@ -17,7 +17,8 @@
   },
   "brand": {
     "name": "Asesoría Latina Co",
-    "tagline": "Professional office for the Latino community"
+    "tagline": "Professional office for the Latino community",
+    "logo": "/images/logo.png"
   },
   "hero": {
     "title": "Clear solutions for your paperwork in the United States",
@@ -129,18 +130,21 @@
         "name": "Abigail Granados",
         "role": "CEO & Founder | Wedding Minister | Asesoría Latina Co LLC",
         "bio": "At the heart of Asesoría Latina Co is a clear purpose: to serve with integrity, empathy, and excellence. My journey began by witnessing how language barriers, misinformation, and lack of reliable guidance affect our Latino community. I created a space where every person is treated with respect, clarity, and professionalism. Asesoría Latina Co is more than an office—it is vision, commitment, and trust.",
+        "image": "/images/abby.png",
         "imageAlt": "Portrait of Abigail Granados"
       },
       {
         "name": "Ale Olivas",
         "role": "Notary | Design advisor | Tax advisor",
         "bio": "With experience in notary services, design guidance, and tax orientation, Ale provides an integrated approach so every client receives clear, efficient solutions tailored to their needs—marked by precision, trust, and human care.",
+        "image": "/images/ale_oliva.jpeg",
         "imageAlt": "Portrait of Ale Olivas"
       },
       {
         "name": "Leonel Martínez",
         "role": "Advisor — Mexican Social Security Institute (IMSS)",
         "bio": "Specialized in IMSS enrollment and guidance in Mexico, Leonel offers reliable solutions to protect clients and their families. He provides personalized orientation so people understand their benefits and obtain appropriate coverage. His mission is to make access to health coverage easier and support what matters most: health and family.",
+        "image": "/images/leonel.jpeg",
         "imageAlt": "Portrait of Leonel Martínez"
       }
     ]
