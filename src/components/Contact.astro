@@ -38,18 +38,6 @@ const c = messages.contact;
 					<p class="text-xs font-semibold uppercase tracking-wide text-gold-muted">{c.locationLabel}</p>
 					<p class="mt-1 text-lg font-semibold text-gold">{c.location}</p>
 				</div>
-				{
-					c.whatsappUrl && (
-						<a
-							class="inline-flex w-full items-center justify-center rounded-full bg-emerald-700 px-5 py-3 text-center text-sm font-semibold text-white hover:bg-emerald-600"
-							href={c.whatsappUrl}
-							rel="noopener noreferrer"
-							target="_blank"
-						>
-							{c.whatsappLabel}
-						</a>
-					)
-				}
 			</div>
 			<div class="rounded-2xl border border-white/10 bg-surface p-6 shadow-sm lg:col-span-3">
 				<ContactForm contact={c} />

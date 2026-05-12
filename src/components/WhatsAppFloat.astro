@@ -10,7 +10,22 @@ const c = messages.contact;
 
 const digits = (c.phoneTel ?? '').replace(/\D/g, '');
 const urlFromPhone = digits.length >= 10 ? `https://wa.me/${digits}` : '';
-const href = (c.whatsappUrl && c.whatsappUrl.trim()) || urlFromPhone || '';
+const baseWa = (c.whatsappUrl && c.whatsappUrl.trim()) || urlFromPhone || '';
+const prefill = (c.whatsappPrefillMessage ?? '').trim();
+
+function waHrefWithText(base: string, text: string): string {
+	if (!base || !text) return base;
+	try {
+		const u = new URL(base);
+		u.searchParams.set('text', text);
+		return u.toString();
+	} catch {
+		const sep = base.includes('?') ? '&' : '?';
+		return `${base}${sep}text=${encodeURIComponent(text)}`;
+	}
+}
+
+const href = baseWa ? waHrefWithText(baseWa, prefill) : '';
 const aria = c.whatsappLabel;
 ---
 
